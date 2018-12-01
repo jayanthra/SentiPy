@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        background-color: #e6ecf0;
+    }
+
+    .posts {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 50px;
+        width: 100%;
+        display: block;
+    }
+
+    .posts li {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        margin: 0;
+        padding: 30px;
+        margin-bottom: 10px;
+        width: calc(100% / 4 - 82px);
+        display: inline-block;
+        vertical-align: top;
+        min-height: 200px;
+        overflow: hidden;
+        margin-right: 10px;
+        border-radius: 6px;
+    }
+
+    .posts p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .posts h1 {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px
+    }
+
+    .posts img {
+        width: 80px;
+        float: left;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+</style>
+
+<body>
+    <ul class="posts"></ul>
+
+    <!-- <script>
+        $.getJSON("/tweets.json", function (posts) {
+            for (var post = 0; post < posts.length; post++) {
+                $(".posts").append("<li><img src='" + posts[post].user.profile_image_url_https + "'/><h3>" +
+                    posts[post].user.name + "</h3>" + "<p>" + posts[post].text +
+                    "</p>" + "</li>");
+            }
+        });
+    </script> -->
+
+<script>
+        $.getJSON("/sentimetalanalysis.json", function (posts) {
+            for (var post = 0; post < posts.length; post++) {
+                $(".posts").append("<li><h3>" +
+                    posts[post].sentiment + "</h3>" + "<p>" + posts[post].text +
+                    "</p>" + "</li>");
+            }
+        });
+    </script>
+</body>
+
+</html>
