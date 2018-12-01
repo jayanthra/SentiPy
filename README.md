@@ -2,11 +2,14 @@ TWEET SENTIMENTAL ANALYSIS
 =================
 
 Tweepy [API Reference](http://docs.tweepy.org/en/v3.5.0/api.html)
+__________________________________________________________________
 Pandas [Documentaion](http://pandas.pydata.org/pandas-docs/stable/)
 
 ### Tweepy
 
 pip install tweepy
+
+for twitter data
 
 ### Pandas
 
