@@ -40,6 +40,7 @@ Basic html file to list all the tweets,
 
 ### Running the app
 
+create a twitter app and add the credentials to the credentials file
 run server (http-server) and open index.html file
 
 
